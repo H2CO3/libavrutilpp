@@ -1,7 +1,7 @@
 OBJECTS = $(patsubst %.c, %.o, $(wildcard *.c))
 OBJECTS += $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 BAUDRATE = __CONFIGURE_BAUDRATE__
-LIBS = $(LIBAVRUTIL)/bld/libavrutil.a $(LIBAVRUTILPP)/bld/libavrutil++.a /usr/lib/avr/lib/libm.a
+LIBS = $(LIBAVRUTILPP)/bld/libavrutil++.a $(LIBAVRUTIL)/bld/libavrutil.a /usr/lib/avr/lib/libm.a
 TARGET_HEX = $(PROJECT).hex
 TARGET_ELF = $(PROJECT).elf
 

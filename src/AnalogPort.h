@@ -1,5 +1,5 @@
 /*
- * Servo.h
+ * AnalogPort.h
  * libavrutil++
  *
  * Created by Árpád Goretity on 04/04/2012.
@@ -7,27 +7,26 @@
  * http://creativecommons.org/licenses/by-sa/3.0/
  */
 
-#ifndef __AVRUTILPP_SERVO_H__
-#define __AVRUTILPP_SERVO_H__
+#ifndef __AVRUTILPP_ANALOGPORT_H__
+#define __AVRUTILPP_ANALOGPORT_H__
 
 #include <avrutil/avrutil.h>
+#include "base.h"
 
 namespace avrutil {
 
-class Servo {
+class AnalogPort {
 	protected:
 	uint8_t timer;
+	uint8_t channel;
 	public:
-	Servo(uint8_t timer);
-
-	void connect();
-	void disconnect();
-
-	void setPosition(uint16_t position);
-	uint16_t getPosition();
+	AnalogPort(uint8_t pwmTimer, uint8_t adcChannel);
+	uint16_t read();
+	void write(uint16_t value);
+	void stopPWM();
 };
 
 };
 
-#endif /* __AVRUTILPP_SERVO_H__ */
+#endif /* __AVRUTILPP_ANALOGPORT_H__ */
 

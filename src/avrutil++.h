@@ -10,12 +10,14 @@
 #ifndef __AVRUTILPP_AVRUTILPP_H__
 #define __AVRUTILPP_AVRUTILPP_H__
 
+#include <avrutil++/AnalogPort.h>
 #include <avrutil++/base.h>
+#include <avrutil++/DigitalPort.h>
 #include <avrutil++/Interrupt.h>
 #include <avrutil++/LCD.h>
-#include <avrutil++/Port.h>
 #include <avrutil++/Servo.h>
 #include <avrutil++/Tone.h>
 #include <avrutil++/USART.h>
 
 #endif /* __AVRUTILPP_AVRUTILPP_H__ */
+

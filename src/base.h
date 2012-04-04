@@ -15,4 +15,8 @@
 void *operator new(size_t size);
 void operator delete(void *ptr);
 
+namespace avrutil {
+};
+
 #endif /* __AVRUTILPP_BASE_H__ */
+

@@ -12,4 +12,19 @@
 
 #include <avrutil/avrutil.h>
 
+namespace avrutil {
+
+class Tone {
+	protected:
+	uint16_t freq;
+	public:
+	Tone(uint16_t freq);
+
+	void start();
+	void stop();
+};
+
+};
+
 #endif /* __AVRUTILPP_TONE_H__ */
+

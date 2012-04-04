@@ -10,6 +10,12 @@
 #include <stdlib.h>
 #include "base.h"
 
+/* 
+ * These have to be implemented manually due to a bug in the toolchain.
+ * Without these implementations, one gets an
+ * "Undefined reference to operator new" linker error.
+ */
+
 void *operator new(size_t size)
 {
 	return malloc(size);
@@ -19,3 +25,4 @@ void operator delete(void *ptr)
 {
 	free(ptr);
 }
+

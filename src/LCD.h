@@ -11,5 +11,26 @@
 #define __AVRUTILPP_LCD_H__
 
 #include <avrutil/avrutil.h>
+#include "base.h"
+
+namespace avrutil {
+
+class LCD {
+	public:
+	LCD();
+
+	void clearScreen();
+	void home();
+	void setCursorPosition(uint8_t pos);
+	void gotoXY(uint8_t yLine, uint8_t xColumn);
+	uint8_t getCursorPosition();
+
+	void putc(char c);
+	void puts(const char *s);
+	void puts(const char *s, size_t count);
+};
+
+};
 
 #endif /* __AVRUTILPP_LCD_H__ */
+
