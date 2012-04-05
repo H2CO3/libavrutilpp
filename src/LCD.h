@@ -23,7 +23,6 @@ class LCD {
 	void home();
 	void setCursorPosition(uint8_t pos);
 	void gotoXY(uint8_t yLine, uint8_t xColumn);
-	uint8_t getCursorPosition();
 
 	void putc(char c);
 	void puts(const char *s);

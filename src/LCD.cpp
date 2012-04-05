@@ -45,11 +45,6 @@ void gotoXY(uint8_t yLine, uint8_t xColumn)
 	}
 }
 
-uint8_t avrutil::LCD::getCursorPosition()
-{
-	return avr_lcd_get_cursor_pos();
-}
-
 void avrutil::LCD::putc(char c)
 {
 	avr_lcd_putc(c);
